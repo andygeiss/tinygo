@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
