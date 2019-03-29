@@ -2,8 +2,7 @@
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/andygeiss/tinygo)](https://goreportcard.com/report/github.com/andygeiss/tinygo)
 
-This project demonstrates how to shrink a WebAssembly App, with a total size of around 3 Megabyte, down to 50 Kilobyte by using tinygo.
-
+git add
 **Table of Contents**
 
 - [Goals](README.md#goals)
