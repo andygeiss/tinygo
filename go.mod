@@ -5,5 +5,5 @@ go 1.12
 require (
 	github.com/andygeiss/ecs v0.0.41
 	github.com/andygeiss/serve v0.0.14
-	github.com/andygeiss/ui v0.0.1
+	github.com/andygeiss/ui v0.0.2
 )
