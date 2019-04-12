@@ -2,7 +2,7 @@ package views
 
 import "syscall/js"
 
-//go:export homeSayHello
+//go:export HomeSayHello
 func HomeSayHello() {
 	js.Global().Call("alert", "alert called from Go!")
 }
