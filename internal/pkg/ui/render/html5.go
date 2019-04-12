@@ -3,7 +3,7 @@ package render
 import (
 	"fmt"
 	"github.com/andygeiss/ecs"
-	"github.com/andygeiss/ui/components"
+	"github.com/andygeiss/tinygo/internal/pkg/ui/components"
 )
 
 // HTML5 ...
