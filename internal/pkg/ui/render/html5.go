@@ -2,7 +2,7 @@ package render
 
 import (
 	"fmt"
-	"github.com/andygeiss/ecs"
+	"github.com/andygeiss/tinygo/internal/pkg/ecs"
 	"github.com/andygeiss/tinygo/internal/pkg/ui/components"
 )
 
