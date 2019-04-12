@@ -2,9 +2,9 @@ package systems
 
 import (
 	"github.com/andygeiss/ecs"
-	"github.com/andygeiss/ui/layout"
-	"github.com/andygeiss/ui/render"
-	"github.com/andygeiss/ui/style"
+	"github.com/andygeiss/tinygo/internal/pkg/ui/layout"
+	"github.com/andygeiss/tinygo/internal/pkg/ui/render"
+	"github.com/andygeiss/tinygo/internal/pkg/ui/style"
 	"syscall/js"
 )
 
@@ -21,9 +21,9 @@ func NewRendering() ecs.System {
 
 // Process ...
 func (s *Rendering) Process(entityManager *ecs.EntityManager) {
-	// Render
 	app := js.Global().Get("document").Call("getElementById", "app")
-	html := render.TinyGo(entityManager)
+	// Render the content with a HTML5 Renderer.
+	html := render.HTML5(entityManager)
 	app.Set("innerHTML", html)
 	// Layout (move, resize, ...)
 	s.layoutAndStyle(entityManager)
@@ -43,7 +43,8 @@ func (s *Rendering) layoutAndStyle(entityManager *ecs.EntityManager) {
 	for _, entity := range entityManager.FilterBy("position", "size") {
 		s.layoutElement(entity)
 		ele := js.Global().Get("document").Call("getElementById", entity.Id)
-		styles := style.Default(entity)
+		// Style the content with a CSS3 Styler.
+		styles := style.CSS3(entity)
 		ele.Set("style", styles)
 	}
 }

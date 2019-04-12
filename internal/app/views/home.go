@@ -4,7 +4,7 @@ import (
 	"github.com/andygeiss/ecs"
 	"github.com/andygeiss/tinygo/internal/app"
 	"github.com/andygeiss/tinygo/internal/app/systems"
-	"github.com/andygeiss/ui/entities"
+	"github.com/andygeiss/tinygo/internal/pkg/ui/entities"
 )
 
 type homeView struct{}
@@ -19,7 +19,7 @@ func (s *homeView) Show() {
 	// Add entities and systems.
 	entityManager := ecs.NewEntityManager()
 	entityManager.Add(
-		entities.NewTinyGoElement("content", "", "Hello Gophers!", "white", "blue", "homeSayHello();"),
+		entities.NewElement("content", "", "Hello Gophers!", "white", "blue", "homeSayHello();"),
 	)
 	systemManager := ecs.NewSystemManager()
 	systemManager.Add(
