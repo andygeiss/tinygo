@@ -1,9 +1,9 @@
 package render_test
 
 import (
-	"github.com/andygeiss/assert"
-	"github.com/andygeiss/assert/is"
-	"github.com/andygeiss/ecs"
+	"github.com/andygeiss/tinygo/internal/pkg/assert"
+	"github.com/andygeiss/tinygo/internal/pkg/assert/is"
+	"github.com/andygeiss/tinygo/internal/pkg/ecs"
 	"github.com/andygeiss/tinygo/internal/pkg/ui/entities"
 	"github.com/andygeiss/tinygo/internal/pkg/ui/render"
 	"testing"

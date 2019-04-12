@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/andygeiss/serve"
-	"github.com/andygeiss/serve/mime"
 	"github.com/andygeiss/tinygo/config"
+	"github.com/andygeiss/tinygo/internal/pkg/serve"
+	"github.com/andygeiss/tinygo/internal/pkg/serve/mime"
 )
 
 func main() {

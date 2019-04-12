@@ -1,8 +1,8 @@
 package style_test
 
 import (
-	"github.com/andygeiss/assert"
-	"github.com/andygeiss/assert/is"
+	"github.com/andygeiss/tinygo/internal/pkg/assert"
+	"github.com/andygeiss/tinygo/internal/pkg/assert/is"
 	"github.com/andygeiss/tinygo/internal/pkg/ui/entities"
 	"github.com/andygeiss/tinygo/internal/pkg/ui/style"
 	"testing"
