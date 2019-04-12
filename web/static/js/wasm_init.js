@@ -20,7 +20,3 @@ WebAssembly.instantiateStreaming(fetch("/app.wasm"), go.importObject).then(
         await go.run(inst);
     }
 );
-
-function homeServiceSend() {
-    inst.exports.homeServiceSend();
-}

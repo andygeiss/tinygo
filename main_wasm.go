@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/andygeiss/tinygo/internal/app/services"
+	"github.com/andygeiss/tinygo/internal/app/views"
 )
 
 func main() {
-	services.NewHomeService().Run()
+	views.NewHomeView().Show()
 }

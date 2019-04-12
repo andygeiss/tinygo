@@ -1,26 +1,25 @@
-package services
+package views
 
 import (
 	"github.com/andygeiss/ecs"
 	"github.com/andygeiss/tinygo/internal/app"
 	"github.com/andygeiss/tinygo/internal/app/systems"
 	"github.com/andygeiss/ui/entities"
-	"syscall/js"
 )
 
-type homeService struct{}
+type homeView struct{}
 
-// NewHomeService ...
-func NewHomeService() app.Service {
-	return &homeService{}
+// NewHomeView ...
+func NewHomeView() app.View {
+	return &homeView{}
 }
 
-// Run ...
-func (s *homeService) Run() {
+// Show ...
+func (s *homeView) Show() {
 	// Add entities and systems.
 	entityManager := ecs.NewEntityManager()
 	entityManager.Add(
-		entities.NewTinyGoElement("content", "", "Hello Gophers!", "white", "blue", "homeServiceSend();"),
+		entities.NewTinyGoElement("content", "", "Hello Gophers!", "white", "blue", "homeSayHello();"),
 	)
 	systemManager := ecs.NewSystemManager()
 	systemManager.Add(
@@ -31,9 +30,4 @@ func (s *homeService) Run() {
 	engine.Setup()
 	engine.Run()
 	engine.Teardown()
-}
-
-//go:export homeServiceSend
-func homeServiceSend() {
-	js.Global().Call("alert", "alert called from Go!")
 }

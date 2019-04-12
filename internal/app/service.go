@@ -1,6 +1,6 @@
 package app
 
-// Service ...
-type Service interface {
-	Run()
+// View ...
+type View interface {
+	Show()
 }
