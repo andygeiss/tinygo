@@ -1,11 +1,10 @@
 package layout_test
 
 import (
+	"github.com/andygeiss/tinygo/internal/app/views"
 	"github.com/andygeiss/tinygo/internal/pkg/assert"
 	"github.com/andygeiss/tinygo/internal/pkg/assert/is"
-	"github.com/andygeiss/tinygo/internal/pkg/ui/components"
-	"github.com/andygeiss/tinygo/internal/pkg/ui/entities"
-	"github.com/andygeiss/tinygo/internal/pkg/ui/layout"
+	"github.com/andygeiss/tinygo/internal/pkg/web/components"
 	"testing"
 )
 
@@ -16,8 +15,8 @@ func TestLandscapeElement(t *testing.T) {
 	eleWidth := maxWidth * 90 / 100
 	posX := maxWidth * 30 / 100
 	posY := maxHeight * 30 / 100
-	e := entities.NewElement("e", "", "foo", "", "", "")
-	layout.LandscapeElement(maxWidth, maxHeight, e)
+	e := views.NewElement("e", "", "foo", "", "", "")
+	views.LandscapeElement(maxWidth, maxHeight, e)
 	pos := e.Get("position").(*components.Position)
 	size := e.Get("size").(*components.Size)
 	assert.That(t, pos.X, is.Equal(posX))

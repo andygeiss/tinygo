@@ -2,7 +2,7 @@ package layout
 
 import (
 	"github.com/andygeiss/tinygo/internal/pkg/ecs"
-	"github.com/andygeiss/tinygo/internal/pkg/ui/components"
+	"github.com/andygeiss/tinygo/internal/pkg/web/components"
 )
 
 // LandscapeElement ...

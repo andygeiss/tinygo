@@ -1,10 +1,10 @@
 package systems
 
 import (
+	"github.com/andygeiss/tinygo/internal/app/views/layout"
 	"github.com/andygeiss/tinygo/internal/pkg/ecs"
-	"github.com/andygeiss/tinygo/internal/pkg/ui/layout"
-	"github.com/andygeiss/tinygo/internal/pkg/ui/render"
-	"github.com/andygeiss/tinygo/internal/pkg/ui/style"
+	"github.com/andygeiss/tinygo/internal/pkg/web/render"
+	"github.com/andygeiss/tinygo/internal/pkg/web/style"
 	"syscall/js"
 )
 

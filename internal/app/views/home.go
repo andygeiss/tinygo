@@ -3,8 +3,8 @@ package views
 import (
 	"github.com/andygeiss/tinygo/internal/app"
 	"github.com/andygeiss/tinygo/internal/app/systems"
+	"github.com/andygeiss/tinygo/internal/app/views/entities"
 	"github.com/andygeiss/tinygo/internal/pkg/ecs"
-	"github.com/andygeiss/tinygo/internal/pkg/ui/entities"
 )
 
 type homeView struct{}
