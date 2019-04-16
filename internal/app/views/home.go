@@ -19,7 +19,7 @@ func (s *homeView) Show() {
 	// Add entities and systems.
 	entityManager := ecs.NewEntityManager()
 	entityManager.Add(
-		entities.NewElement("content", "", "Hello Gophers!", "white", "blue", "homeSayHello();"),
+		entities.NewElement("content", "", "Hello Gophers!", "white", "blue", "inst.exports.HomeSayHello();"),
 	)
 	systemManager := ecs.NewSystemManager()
 	systemManager.Add(

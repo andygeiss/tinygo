@@ -14,7 +14,6 @@ func main() {
 	serve.AddStaticHandler("/assets/js/pwa_init.js", mime.Javascript, "web/static/js/pwa_init.js")
 	serve.AddStaticHandler("/assets/js/wasm_exec.js", mime.Javascript, "web/static/js/wasm_exec.js")
 	serve.AddStaticHandler("/assets/js/wasm_init.js", mime.Javascript, "web/static/js/wasm_init.js")
-	serve.AddStaticHandler("/assets/js/home_events.js", mime.Javascript, "internal/app/views/home.events.js")
 	serve.AddTemplatesHandler("/manifest.json", mime.Json, "web/templates/manifest.json", config.DefaultApp)
 	serve.AddTemplatesHandler("/service-worker.js", mime.Javascript, "web/templates/service-worker.js", config.DefaultApp)
 	serve.AddTemplatesHandler("/", mime.Html, "web/templates/index.html", config.DefaultApp)

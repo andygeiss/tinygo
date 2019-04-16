@@ -1,7 +1,8 @@
 package layout_test
 
 import (
-	"github.com/andygeiss/tinygo/internal/app/views"
+	"github.com/andygeiss/tinygo/internal/app/views/entities"
+	"github.com/andygeiss/tinygo/internal/app/views/layout"
 	"github.com/andygeiss/tinygo/internal/pkg/assert"
 	"github.com/andygeiss/tinygo/internal/pkg/assert/is"
 	"github.com/andygeiss/tinygo/internal/pkg/web/components"
@@ -15,8 +16,8 @@ func TestPortraitElement(t *testing.T) {
 	eleWidth := maxWidth * 60 / 100
 	posX := maxWidth * 20 / 100
 	posY := maxHeight * 40 / 100
-	e := views.NewElement("e", "", "foo", "", "", "")
-	views.PortraitElement(maxWidth, maxHeight, e)
+	e := entities.NewElement("e", "", "foo", "", "", "")
+	layout.PortraitElement(maxWidth, maxHeight, e)
 	pos := e.Get("position").(*components.Position)
 	size := e.Get("size").(*components.Size)
 	assert.That(t, pos.X, is.Equal(posX))
